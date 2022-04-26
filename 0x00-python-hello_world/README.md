@@ -8,7 +8,7 @@
 * Tested on Ubuntu 20.04 LTS
 
 ## Tasks
-All of the following files are functions written in C:
+The following files are python scripts, shell scripts and functions in C:
 
 | Filename | Description |
 | -------- | ----------- |
