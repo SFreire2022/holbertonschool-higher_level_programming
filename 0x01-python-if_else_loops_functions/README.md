@@ -16,3 +16,4 @@ The following files are python scripts, shell scripts and functions in C:
 | `1-last_digit.py` | Print the last digit of the random number stored in the variable number. |
 | `2-print_alphabet.py` | Program that prints the ASCII alphabet, in lowercase, not followed by a new line. |
 | `3-print_alphabt.py` | Program that prints the ASCII alphabet, in lowercase, not followed by a new line except e an q. |
+| `4-print_hexa.py` | Program that prints all numbers from 0 to 98 in decimal and in hexadecimal. |
