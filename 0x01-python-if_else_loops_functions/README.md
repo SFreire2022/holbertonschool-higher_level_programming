@@ -23,3 +23,4 @@ The following files are python scripts, shell scripts and functions in C:
 | `8-uppercase.py` | Function that prints a string in uppercase followed by a new line. |
 | `9-print_last_digit.py` | function that prints the last digit of a number. |
 | `10-add.py` | Function that adds two integers and returns the result. |
+| `11-pow.py` | Function that computes a to the power of b and return the value. |
