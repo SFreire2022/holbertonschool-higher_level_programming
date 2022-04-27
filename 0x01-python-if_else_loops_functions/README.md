@@ -21,3 +21,4 @@ The following files are python scripts, shell scripts and functions in C:
 | `6-print_comb3.py` | Program that prints all possible different combinations of two digits. |
 | `7-islower.py` | Function that checks for lowercase character. |
 | `8-uppercase.py` | Function that prints a string in uppercase followed by a new line. |
+| `9-print_last_digit.py` | function that prints the last digit of a number. |
