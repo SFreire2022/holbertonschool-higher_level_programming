@@ -13,6 +13,4 @@ The following files are python scripts, shell scripts and functions in C:
 | Filename | Description |
 | -------- | ----------- |
 | `0-positive_or_negative.py` | Print whether the number stored in the random variable number is positive, negative or zero. |
-| `task` | Description. |
-
-
+| `1-last_digit.py` | Print the last digit of the random number stored in the variable number. |
