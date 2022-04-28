@@ -8,8 +8,6 @@
  */
 int check_cycle(listint_t *list)
 {
-	if (!list)/* If empty list given return 0 */
-		return (0);
 	/* Aux nodes declaration and initialization */
 	listint_t *slow_p = list, *fast_p = list;
 
