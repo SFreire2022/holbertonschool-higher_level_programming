@@ -12,4 +12,5 @@ The following files are python scripts, shell scripts and functions in C:
 
 | Filename | Description |
 | -------- | ----------- |
-| `0-add.py` | Program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3 |
+| `0-add.py` | Program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3. |
+| `1-calculation.py` | Program that imports the functions from the file calculator_1.py, does some Maths, and prints the result. |
