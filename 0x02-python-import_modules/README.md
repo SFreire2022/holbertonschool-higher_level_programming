@@ -16,3 +16,4 @@ The following files are python scripts, shell scripts and functions in C:
 | `1-calculation.py` | Program that imports the functions from the file calculator_1.py, does some Maths, and prints the result. |
 | `2-args.py` | Program that prints the number of and the list of its arguments. |
 | `3-infinite_add.py` | Program that prints the result of the addition of all arguments. |
+ | `4-hidden_discovery.py` | Program that prints all the names defined by the compiled module hidden_4.pyc. |
