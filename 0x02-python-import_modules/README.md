@@ -20,3 +20,5 @@ The following files are python scripts, shell scripts and functions in C:
  | `5-variable_load.py` | Program that imports the variable a from the file variable_load_5.py and prints its value. |
  | `100-my_calculator.py` | Program that imports all functions from the file calculator_1.py and handles basic operations. |
  | `101-easy_print.py` | Program that prints #pythoniscool, followed by a new line, in the standard output. |
+ | `102-magic_calculation.py` |  Python function def magic_calculation(a, b): that does exactly the same as the given Python program bytecode. |
+ | `103-fast_alphabet.py` | program that prints the alphabet in uppercase, followed by a new line. |
