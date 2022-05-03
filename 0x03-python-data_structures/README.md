@@ -14,3 +14,4 @@ The following files are python scripts, shell scripts and functions in C:
 | -------- | ----------- |
 | `0-print_list_integer.py` | Function that prints all integers of a list. |
 | `1-element_at.py` | Function that retrieves an element from a list like in C. |
+| `2-replace_in_list.py` | Function that replaces an element of a list at a specific position (like in C). |
