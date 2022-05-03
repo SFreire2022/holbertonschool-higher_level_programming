@@ -20,3 +20,4 @@ The following files are python scripts, shell scripts and functions in C:
 | `5-no_c.py` | Function that removes all characters c and C from a string. |
 | `6-print_matrix_integer.py` | function that prints a matrix of integers. |
 | `7-add_tuple.py` | Function that adds 2 tuples. |
+| `8-multiple_returns.py` | function that returns a tuple with the length of a string and its first character. |
