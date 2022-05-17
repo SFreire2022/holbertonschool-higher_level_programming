@@ -21,5 +21,5 @@ The following files are python scripts, shell scripts and functions in C:
 | `6-square.py` | Class `Square` that defines a square by: (based on 5-square.py) |
 | `100-singly_linked_list.py` | Class `Node` that defines a node of a singly linked list |
 | `101-square.py` | Class `Square` that defines a square by: (based on 6-square.py)  |
-| `1102-square.py` | Class `Square` that defines a square by: (based on 4-square.py) |
+| `102-square.py` | Class `Square` that defines a square by: (based on 4-square.py) |
 | `103-python.c` | Python class `MagicClass` that does exactly the same as the given Python bytecode |
