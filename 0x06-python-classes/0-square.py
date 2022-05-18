@@ -3,6 +3,5 @@
 
 
 class Square:
-    """Empty definition for class Square"""
-	
+    """Empty definition for class Square"""	
     pass
