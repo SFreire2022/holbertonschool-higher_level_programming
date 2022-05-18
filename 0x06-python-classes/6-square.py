@@ -4,10 +4,10 @@
 
 class Square:
     """Definition for class Square adding first atribute size and def value
-	now adding possition attribute and default value"""
+    now adding possition attribute and default value"""
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
-		self.position = position
+        self.position = position
 
     @property
     def size(self):
