@@ -51,7 +51,7 @@ class Rectangle:
         """Return representation string to print rectangle with #"""
         if self.width == 0 or self.height == 0:
             return ''
-	    my_string = ''
+        my_string = ''
         for x in range(self.height):
             for y in range(self.width):
                 my_string += '#'
