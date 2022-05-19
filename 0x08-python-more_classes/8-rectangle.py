@@ -3,8 +3,7 @@
 
 
 class Rectangle:
-    """Definition for class Rectangle adding
-    first atributes width and height"""
+    """Definition for class Rectangle"""
 
     number_of_instances = 0
     print_symbol = '#'
