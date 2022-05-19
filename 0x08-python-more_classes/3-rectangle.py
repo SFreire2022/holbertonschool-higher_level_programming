@@ -52,9 +52,9 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ''
 	    my_string = ''
-        for col in range(self.height):
-            for row in range(self.width):
+        for x in range(self.height):
+            for y in range(self.width):
                 my_string += '#'
-            if col != self.height - 1:
+            if x != self.height - 1:
                 my_string += '\n'
         return my_string
