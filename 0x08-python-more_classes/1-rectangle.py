@@ -14,7 +14,7 @@ class Rectangle:
         """Method to define attribute width to use with setter."""
         return self.__width
 
-    @size.setter
+    @width.setter
     def width(self, new_width):
         """Method to set the private attribute width."""
         if not isinstance(new_width, int):
@@ -28,7 +28,7 @@ class Rectangle:
         """Method to define attribute height to use with setter."""
         return self.__size
 
-    @size.setter
+    @height.setter
     def height(self, new_height):
         """Method to set the private attribute height."""
         if not isinstance(new_height, int):
