@@ -5,9 +5,9 @@
 class Rectangle:
     """Definition for class Rectangle adding
     first atributes width and height"""
-    def __init__(self, width=0, height=(0, 0)):
-        self.size = size
-        self.position = position
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
