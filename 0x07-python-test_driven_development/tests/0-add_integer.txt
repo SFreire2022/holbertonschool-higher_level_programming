@@ -20,40 +20,40 @@ that value is equivalent to using the ``+`` operator.
     >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(2, 3)
     5
-	>>> add_integer(0, 3)
-	3
-	>>> add_integer(0, 0)
-	0
-	>>> add_integer(5, 0)
-	5
+    >>> add_integer(0, 3)
+    3
+    >>> add_integer(0, 0)
+    0
+    >>> add_integer(5, 0)
+    5
 
 It also works with floating-point values.
 
 ::
 
-	>>> x = float(3.14)
+    >>> x = float(3.14)
     >>> add_integer(x, 3)
     6
-	>>> add_integer(5, x)
-	8
-	>>> add_integer(x)
-	101
-	>>> add_integer(x, x)
-	6
+    >>> add_integer(5, x)
+    8
+    >>> add_integer(x)
+    101
+    >>> add_integer(x, x)
+    6
 
 Negative values.
 
 ::
 
-	>>> x = int(-2)
+    >>> x = int(-2)
     >>> add_integer(-2, 3)
     1
-	>>> add_integer(5, -2)
-	3
-	>>> add_integer(-2)
-	96
-	>>> add_integer(-2, -2)
-	-4
+    >>> add_integer(5, -2)
+    3
+    >>> add_integer(-2)
+    96
+    >>> add_integer(-2, -2)
+    -4
 
 Default value for b arg (98).
 
@@ -61,52 +61,52 @@ Default value for b arg (98).
 
     >>> add_integer(2)
     100
-	>>> add_integer(0)
-	98
+    >>> add_integer(0)
+    98
 
 No argument
 
 ::
 
-	>>> add_integer()
-	Traceback (most recent call last):
-	TypeError: add_integer() missing 1 required positional argument: 'a'
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 
 More than 2 arguments
 
 ::
 
-	>>> add_integer(1, 2, 3)
-	Traceback (most recent call last):
-	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+    >>> add_integer(1, 2, 3)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 Overflow
 
 ::
 
-	>>> add_integer(float('inf'), 1)
-	Traceback (most recent call last):
+    >>> add_integer(float('inf'), 1)
+    Traceback (most recent call last):
               ...
-	OverflowError: cannot convert float infinity to integer
+    OverflowError: cannot convert float infinity to integer
 
-	>>> add_integer(1, float('inf'))
-	Traceback (most recent call last):
+    >>> add_integer(1, float('inf'))
+    Traceback (most recent call last):
               ...
-	OverflowError: cannot convert float infinity to integer
+    OverflowError: cannot convert float infinity to integer
 
-	>>> add_integer(float('inf'), float('inf'))
-	Traceback (most recent call last):
+    >>> add_integer(float('inf'), float('inf'))
+    Traceback (most recent call last):
               ...
-	OverflowError: cannot convert float infinity to integer
+    OverflowError: cannot convert float infinity to integer
 
 Float NaN ``not a number`` type
 
 ::
 
-	>>> add_integer(float('nan'))
-	Traceback (most recent call last):
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
     	      ...
-	ValueError: cannot convert float NaN to integer
+    ValueError: cannot convert float NaN to integer
 
 Non-Numbers
 ===========
@@ -119,124 +119,124 @@ Char
 
 ::
 
-	>>> x = 'c'
-	>>> add_integer(x, 3)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> x = 'c'
+    >>> add_integer(x, 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(3, x)
-	Traceback (most recent call last):
-	TypeError: b must be an integer
+    >>> add_integer(3, x)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
-	>>> add_integer(x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(x, x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x, x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
 List
 
 ::
 
-	>>> x = list(("element1", "element2", "element3"))
-	>>> add_integer(x, 3)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> x = list(("element1", "element2", "element3"))
+    >>> add_integer(x, 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(3, x)
-	Traceback (most recent call last):
-	TypeError: b must be an integer
+    >>> add_integer(3, x)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
-	>>> add_integer(x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(x, x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x, x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
 Srting
 
 ::
 
-	>>> x = str("Hello World")
-	>>> add_integer(x, 3)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> x = str("Hello World")
+    >>> add_integer(x, 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(3, x)
-	Traceback (most recent call last):
-	TypeError: b must be an integer
+    >>> add_integer(3, x)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
-	>>> add_integer(x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(x, x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x, x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
 Bool ``bool(5) = True``
 
 ::
 
-	>>> x = bool(5)
-	>>> add_integer(x, 3)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> x = bool(5)
+    >>> add_integer(x, 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(3, x)
-	Traceback (most recent call last):
-	TypeError: b must be an integer
+    >>> add_integer(3, x)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
-	>>> add_integer(x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(x, x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x, x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
 Dict
 
 ::
 
-	>>> x = dict(name="Sebastian", age=33)
-	>>> add_integer(x, 3)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> x = dict(name="Sebastian", age=33)
+    >>> add_integer(x, 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(3, x)
-	Traceback (most recent call last):
-	TypeError: b must be an integer
+    >>> add_integer(3, x)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
-	>>> add_integer(x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(x, x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x, x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
 tuple
 
 ::
 
-	>>> x = tuple(("apple", "lemon", "cherry"))
-	>>> add_integer(x, 3)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> x = tuple(("apple", "lemon", "cherry"))
+    >>> add_integer(x, 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(3, x)
-	Traceback (most recent call last):
-	TypeError: b must be an integer
+    >>> add_integer(3, x)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
-	>>> add_integer(x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-	>>> add_integer(x, x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+    >>> add_integer(x, x)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
