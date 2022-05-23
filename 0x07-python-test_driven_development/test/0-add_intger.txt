@@ -64,6 +64,22 @@ Default value for b arg (98).
 	>>> add_integer(0)
     98
 
+No argument
+
+::
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+More than 2 arguments
+
+::
+
+	>>> add_integer(1, 2, 3)
+	Traceback (most recent call last):
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
 Non-Numbers
 ===========
 
@@ -194,13 +210,5 @@ tuple
 	TypeError: a must be an integer
 
 	>>> add_integer(x, x)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
-
-No a argument
-
-::
-
-	>>> add_integer()
 	Traceback (most recent call last):
 	TypeError: a must be an integer
