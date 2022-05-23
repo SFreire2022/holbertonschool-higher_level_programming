@@ -99,6 +99,14 @@ Overflow
               ...
     OverflowError: cannot convert float infinity to integer
 
+Float NaN ``not a number`` type
+
+::
+
+	>>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    	      ...
+    ValueError: cannot convert float NaN to integer
 
 Non-Numbers
 ===========
