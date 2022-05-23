@@ -1,40 +1,206 @@
 ===============================
- How to Use doctest_in_help.py
+ How to Use 0-add_integer.py
 ===============================
 
 This library is very simple, since it only has one function called
-``my_function()``.
+``add_integer()``.
+Prototype: ``def add_integer(a, b=98):``
+* a and b must be integers or floats, otherwise raise a
+TypeError exception with the message ``a must be an integer or b must be an integer``
+* a and b must be first casted to integers if they are float.
 
 Numbers
 =======
 
-``my_function()`` returns the product of its arguments.  For numbers,
-that value is equivalent to using the ``*`` operator.
+``add_integer()`` returns the addition of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
 
 ::
 
-    >>> from doctest_in_help import my_function
-    >>> my_function(2, 3)
-    6
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(2, 3)
+    5
+	>>> add_integer(0, 3)
+    3
+	>>> add_integer(0, 0)
+    0
+	>>> add_integer(5, 0)
+    5
 
 It also works with floating-point values.
 
 ::
 
-    >>> my_function(2.0, 3)
-    6.0
+	>>> x = float(3.14)
+    >>> add_integer(x, 3)
+    6
+	>>> add_integer(5, x)
+    8
+	>>> add_integer(x)
+    101
+	>>> add_integer(x, x)
+    6
+
+Negative values.
+
+::
+
+	>>> x = int(-2)
+    >>> add_integer(-2, 3)
+    1
+	>>> add_integer(5, -2)
+    3
+	>>> add_integer(-2)
+    96
+	>>> add_integer(-2, -2)
+	-4
+
+Default value for b arg (98).
+
+::
+
+    >>> add_integer(2)
+    100
+	>>> add_integer(0)
+    98
 
 Non-Numbers
 ===========
 
-Because ``*`` is also defined on data types other than numbers,
-``my_function()`` works just as well if one of the arguments is a
-string, a list, or a tuple.
+The requirement for this module expect a TypeError exception
+with the message ``a must be an integer or b must be an integer`` if any arg
+isn't integer or float.
+
+Char
 
 ::
 
-    >>> my_function('a', 3)
-    'aaa'
+	>>>x = 'c'
+	>>> add_integer(x, 3)
+	Traceback (most recent call last):
+    TypeError: a must be an integer
 
-    >>> my_function(['A', 'B', 'C'], 2)
-    ['A', 'B', 'C', 'A', 'B', 'C']
+	>>> add_integer(3, x)
+	Traceback (most recent call last):
+    TypeError: b must be an integer
+
+	>>> add_integer(x)
+	Traceback (most recent call last):
+    TypeError: a must be an integer
+
+	>>> add_integer(x, x)
+	Traceback (most recent call last):
+    TypeError: a must be an integer
+
+List
+
+::
+
+	>>>x = list(("element1", "element2", "element3"))
+	>>> add_integer(x, 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(3, x)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(x, x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Srting
+
+::
+
+	>>>x = str("Hello World")
+	>>> add_integer(x, 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(3, x)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(x, x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Bool ``bool(5) = True``
+
+::
+
+	>>>x = bool(5)
+	>>> add_integer(x, 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(3, x)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(x, x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Dict
+
+::
+
+	>>>x = dict(name="Sebastian", age=33)
+	>>> add_integer(x, 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(3, x)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(x, x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+tuple
+
+::
+
+	>>>x = tuple(("apple", "lemon", "cherry"))
+	>>> add_integer(x, 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(3, x)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(x, x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+No a argument
+
+::
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: a must be an integer
