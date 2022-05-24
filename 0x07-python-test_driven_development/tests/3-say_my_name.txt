@@ -67,7 +67,7 @@ Bad args:
 
 
 Wrong data types (Not Strings):
-===========================
+===============================
 
 Tuple
 
