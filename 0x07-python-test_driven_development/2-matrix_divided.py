@@ -31,16 +31,19 @@ def matrix_divided(matrix, div):
     for i in range(len(matrix)):
         if type(matrix[i]) is not list:
             raise TypeError(m_error)
+        for j in matrix[i]:
+            if type(j) not in [int, float]:
+                raise TypeError(m_error)
+
+    for i in range(len(matrix)):
+        if type(matrix[i]) is not list:
+            raise TypeError(m_error)
         if len(matrix[0]) != len(matrix[i]):
             raise TypeError('Each row of the matrix must have the same size')
 
     for i in range(len(matrix)):
         res_mtx.append([])
-        if type(matrix[i]) is not list:
-            raise TypeError(m_error)
         for j in matrix[i]:
-            if type(k) not in [int, float]:
-                raise TypeError(m_error)
             cel = j / div
             cel = round(cel, 2)
             res_mtx[i].append(cel)
