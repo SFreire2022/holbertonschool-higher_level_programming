@@ -1,5 +1,5 @@
 ==============================
- How to Use 2-say_my_name.py
+ How to Use 2-print_square.py
 ===============================
 
 Module containing just on function that prints a square with the character #.
@@ -46,3 +46,62 @@ Bad args:
     >>> print_square("Arg1", "Arg2", "Arg3")
     Traceback (most recent call last):
     TypeError: print_square() takes 1 positional argument but 3 were given
+
+Wrong data types (Not Strings):
+===============================
+
+Tuple
+
+    >>> x = tuple(("apple", "lemon", "cherry"))
+    >>> print_square(x)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+list
+
+    >>> x = list(("element1", "element2", "element3"))
+    >>> print_square(x)
+	    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Bool
+
+    >>> x = bool(5)
+    >>> print_square(x)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Dict
+
+    >>> x = dict(name="Sebastian", age=33)
+    >>> print_square(x)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Overflow
+
+    >>> x = float('inf')
+    >>> print_square(x)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+NegativeInt
+
+    >>> x = int(-20)
+    >>> print_square(x)
+    Traceback (most recent call last):
+    TypeError: size must be >= 0
+
+float
+
+    >>> x = float(20.50)
+    >>> print_square(x)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Type None
+
+    >>> x = None
+    >>> print_square(x)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
