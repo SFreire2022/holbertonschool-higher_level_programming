@@ -1,0 +1,190 @@
+==============================
+ How to Use 2-say_my_name.py
+===============================
+
+Function that prints "My name is <first name> <last name>"
+
+Prototype: ``def say_my_name(first_name, last_name=""):``
+`first_name` and `last_name must` be strings otherwise,
+raise a TypeError exception with the message `first_name must be a string`
+or `last_name must be a string`
+
+
+Import function from module:
+==================================
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Normal mode (correct input and output):
+=======================================
+Strings
+
+    >>> say_my_name(Sebastian, Freire)
+    My name is Sebastian Freire
+    >>> say_my_name("Sebastian", "Freire")
+    My name is Sebastian Freire
+    >>> say_my_name(Sebastian)
+    My name is Sebastian
+    >>> say_my_name("Sebastian")
+    My name is Sebastian
+
+Empty Strings
+
+    >>> x = ""
+    >>> say_my_name(x, Freire)
+    My name is  Freire
+    >>> say_my_name("Sebastian", x)
+    My name is Sebastian
+    >>> say_my_name(x)
+    My name is
+    >>> say_my_name(x, x)
+    My name is
+
+Char
+
+    >>> x = 'S'
+    >>> say_my_name(x, Freire)
+    My name is S Freire
+    >>> say_my_name(x)
+    My name is S
+    >>> say_my_name(Sebastian, x)
+    My name is Sebastian S
+    >>> say_my_name(x, x)
+    My name is S S
+
+
+Bad args:
+=========
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+    >>> say_my_name(Arg1, Arg2, Arg3)
+    Traceback (most recent call last):
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+
+
+Wrong data types (Not Strings):
+===========================
+
+Tuple
+
+    >>> x = tuple(("apple", "lemon", "cherry"))
+    >>> say_my_name(x, Freire)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Sebastian, x)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name(x, x)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+list
+
+    >>> x = list(("element1", "element2", "element3"))
+    >>> say_my_name(x, Freire)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Sebastian, x)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name(x, x)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Bool
+
+    >>> x = bool(5)
+    >>> say_my_name(x, Freire)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Sebastian, x)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name(x, x)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Dict
+
+    >>> x = dict(name="Sebastian", age=33)
+    >>> say_my_name(x, Freire)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Sebastian, x)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name(x, x)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Overflow
+
+    >>> x = float('inf')
+    >>> say_my_name(x, Freire)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Sebastian, x)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name(x, x)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Int
+
+    >>> x = int(20)
+    >>> say_my_name(x, Freire)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Sebastian, x)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name(x, x)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+float
+
+    >>> x = float(20.50)
+    >>> say_my_name(x, Freire)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Sebastian, x)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name(x, x)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Type None
+
+    >>> x = None
+    >>> say_my_name(x, Freire)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(Sebastian, x)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name(x, x)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
