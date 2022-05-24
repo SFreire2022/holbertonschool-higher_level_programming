@@ -19,19 +19,15 @@ Normal mode (correct input and output):
 =======================================
 Strings
 
-    >>> say_my_name(Sebastian, Freire)
-    My name is Sebastian Freire
     >>> say_my_name("Sebastian", "Freire")
     My name is Sebastian Freire
-    >>> say_my_name(Sebastian)
-    My name is Sebastian
     >>> say_my_name("Sebastian")
     My name is Sebastian
 
 Empty Strings
 
     >>> x = ""
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     My name is  Freire
     >>> say_my_name("Sebastian", x)
     My name is Sebastian
@@ -43,11 +39,11 @@ Empty Strings
 Char
 
     >>> x = 'S'
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     My name is S Freire
     >>> say_my_name(x)
     My name is S
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     My name is Sebastian S
     >>> say_my_name(x, x)
     My name is S S
@@ -86,11 +82,11 @@ Wrong data types (Not Strings):
 Tuple
 
     >>> x = tuple(("apple", "lemon", "cherry"))
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
@@ -101,11 +97,11 @@ Tuple
 list
 
     >>> x = list(("element1", "element2", "element3"))
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
@@ -116,11 +112,11 @@ list
 Bool
 
     >>> x = bool(5)
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
@@ -131,11 +127,11 @@ Bool
 Dict
 
     >>> x = dict(name="Sebastian", age=33)
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
@@ -146,11 +142,11 @@ Dict
 Overflow
 
     >>> x = float('inf')
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
@@ -161,11 +157,11 @@ Overflow
 Int
 
     >>> x = int(20)
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
@@ -176,11 +172,11 @@ Int
 float
 
     >>> x = float(20.50)
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
@@ -191,11 +187,11 @@ float
 Type None
 
     >>> x = None
-    >>> say_my_name(x, Freire)
+    >>> say_my_name(x, "Freire")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(Sebastian, x)
+    >>> say_my_name("Sebastian", x)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
