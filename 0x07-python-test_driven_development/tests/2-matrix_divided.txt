@@ -100,7 +100,7 @@ Overflow
     [[0.0, 0.0], [0.0, 0.0]]
 
     >>> matrix_divided([[float('inf'), 2], [3, float('-inf')]], 2)
-    [[inf, 1], [1.50, -inf]]
+    [[inf, 1.0], [1.5, -inf]]
 
 Division by zero
 
