@@ -22,7 +22,7 @@ Strings
     >>> say_my_name("Sebastian", "Freire")
     My name is Sebastian Freire
     >>> say_my_name("Sebastian")
-    My name is Sebastian
+	My name is Sebastian 
 
 Empty Strings
 
@@ -42,7 +42,7 @@ Char
     >>> say_my_name(x, "Freire")
     My name is S Freire
     >>> say_my_name(x)
-    My name is S
+	My name is S
     >>> say_my_name("Sebastian", x)
     My name is Sebastian S
     >>> say_my_name(x, x)
