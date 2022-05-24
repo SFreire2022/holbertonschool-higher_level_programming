@@ -90,7 +90,7 @@ NegativeInt
     >>> x = int(-20)
     >>> print_square(x)
     Traceback (most recent call last):
-    TypeError: size must be >= 0
+    ValueError: size must be >= 0
 
 float
 
