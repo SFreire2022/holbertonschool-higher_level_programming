@@ -52,6 +52,20 @@ Char
     >>> say_my_name(x, x)
     My name is S S
 
+New Line Char
+
+    >>> say_my_name("Sebastian\n", "Freire")
+    My name is Sebastian
+     Freire
+
+    >>> say_my_name("Sebastian", "Freire\n")
+    My name is Sebastian Freire
+    <BLANKLINE>
+
+    >>> say_my_name("Sebastian\n", "Freire\n")
+    My name is Sebastian
+     Freire
+    <BLANKLINE>
 
 Bad args:
 =========
