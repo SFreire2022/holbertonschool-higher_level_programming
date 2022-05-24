@@ -28,12 +28,25 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError('division by zero')
 
+    if len(matrix) is 0:
+        raise TypeError(m_error)
+
     for i in range(len(matrix)):
         if type(matrix[i]) is not list:
             raise TypeError(m_error)
         for j in matrix[i]:
             if type(j) not in [int, float]:
                 raise TypeError(m_error)
+
+    size = len(matrix[0])
+    if size is 0:
+        raise TypeError(m_error)
+
+    for row in matrix:
+        if len(row) is not size:
+            raise TypeError('Each row of the matrix must have the same size')
+        if type(row) is not list:
+            raise TypeError(m_error)
 
     for i in range(len(matrix)):
         if type(matrix[i]) is not list:
