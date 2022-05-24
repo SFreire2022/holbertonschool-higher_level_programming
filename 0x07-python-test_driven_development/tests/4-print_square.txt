@@ -1,0 +1,48 @@
+==============================
+ How to Use 2-say_my_name.py
+===============================
+
+Module containing just on function that prints a square with the character #.
+
+Prototype: def print_square(size):
+size is the size length of the square
+size must be an integer,
+otherwise raise a TypeError exception with the message size must be an integer
+if size is less than 0,
+raise a ValueError exception with the message size must be >= 0
+
+
+Import function from module:
+==================================
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Normal mode (correct input and output):
+=======================================
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(7)
+    #######
+    #######
+    #######
+    #######
+    #######
+    #######
+
+    >>> print_square(0)
+
+Bad args:
+=========
+
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+    >>> print_square("Arg1", "Arg2", "Arg3")
+    Traceback (most recent call last):
+    TypeError: print_square() takes 1 positional argument but 3 were given
