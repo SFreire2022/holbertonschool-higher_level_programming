@@ -32,7 +32,7 @@ def matrix_divided(matrix, div):
         if type(matrix[i]) is not list:
             raise TypeError(m_error)
         if len(matrix[0]) != len(matrix[i]):
-                raise TypeError('Each row of the matrix must have the same size')
+            raise TypeError('Each row of the matrix must have the same size')
 
     for i in range(len(matrix)):
         res_mtx.append([])
