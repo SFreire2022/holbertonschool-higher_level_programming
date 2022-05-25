@@ -39,7 +39,7 @@ Mutiple line separators
     :
     <BLANKLINE>
 
-    >>> text_indentation('?Rand.two:')
+    >>> text_indentation('?Rand.om:')
     ?
     <BLANKLINE>
     Rand.
@@ -68,7 +68,7 @@ line separator '.'
     >>> text_indentation('Random. text')
     Random.
     <BLANKLINE>
-     text
+    text
 
     >>> text_indentation('Random text.More random text.And more')
     Random text.
@@ -117,7 +117,7 @@ line separator '?'
     <BLANKLINE>
     More random text?
     <BLANKLINE>
-     And more
+    And more
 
 line separator ':'
 
@@ -145,7 +145,7 @@ line separator ':'
     <BLANKLINE>
     More random text:
     <BLANKLINE>
-     And more
+    And more
 
 
 Bad args:
