@@ -52,7 +52,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empty(self):
         """ Empty values return None """
-		self.assertIsNone(max_integer([]))
+        self.assertIsNone(max_integer([]))
         self.assertEqual(max_integer({}), None)
         self.assertEqual(max_integer(()), None)
 
