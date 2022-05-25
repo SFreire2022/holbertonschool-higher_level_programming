@@ -27,9 +27,9 @@ class TestMaxInteger(unittest.TestCase):
 
 
     def test_string(self):
-        self.assertEqual(max_integer(["aaaab", "aaaz"]), "aaaz")
-        self.assertEqual(max_integer(["aaab", "Aaaz"]), "aaab")
-        self.assertEqual(max_integer(["a", "z"]), "z")
+        self.assertEqual(max_integer(["aaab", "aaaz"]), "aaaz")
+        self.assertEqual(max_integer(["asab", "Asaz"]), "asab")
+        self.assertEqual(max_integer(["e", "g"]), "g")
 
     def test_bool(self):
         self.assertEqual(max_integer([False, True]), True)
