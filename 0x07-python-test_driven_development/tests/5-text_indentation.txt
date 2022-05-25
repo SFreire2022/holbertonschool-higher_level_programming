@@ -1,0 +1,223 @@
+==============================
+ How to Use 5-text_indentation.py
+===============================
+
+Module containing just one function that
+prints a text with 2 new lines after each of these characters: ., ? and :
+
+Prototype: def text_indentation(text):
+text must be a string, otherwise raise a TypeError exception with the message
+text must be a string
+There should be no space at the beginning or at the end of each printed line
+
+
+Import function from module:
+==================================
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Normal mode (correct input and output):
+=======================================
+
+
+Non line separators
+
+    >>> text_indentation('No delimiters')
+    No delimiters
+
+Empty str arg
+
+    >>> text_indentation('')
+
+Mutiple line separators
+
+    >>> text_indentation('.?:')
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+    >>> text_indentation('?Rand.two:')
+    ?
+    <BLANKLINE>
+    Rand.
+    <BLANKLINE>
+    om:
+    <BLANKLINE>
+
+    >>> text_indentation('Rand.om text?More random text:')
+    Rand.
+    <BLANKLINE>
+    om text?
+    <BLANKLINE>
+    More random text:
+    <BLANKLINE>
+
+    >>> text_indentation('Ran?dom.text?')
+    Ran?
+    <BLANKLINE>
+    dom.
+    <BLANKLINE>
+    text?
+    <BLANKLINE>
+
+line separator '.'
+
+    >>> text_indentation('Random. text')
+    Random.
+    <BLANKLINE>
+     text
+
+    >>> text_indentation('Random text.More random text.And more')
+    Random text.
+    <BLANKLINE>
+    More random text.
+    <BLANKLINE>
+    And more
+
+    >>> text_indentation('Random text.More random text')
+    Random text.
+    <BLANKLINE>
+    More random text
+
+    >>> text_indentation('.More random text')
+    .
+    <BLANKLINE>
+    More random text
+
+    >>> text_indentation('Random text.')
+    Random text.
+    <BLANKLINE>
+
+line separator '?'
+
+    >>> text_indentation('Random text?More random text')
+    Random text?
+    <BLANKLINE>
+    More random text
+
+    >>> text_indentation('?More random text')
+    ?
+    <BLANKLINE>
+    More random text
+
+    >>> text_indentation('Random text?')
+    Random text?
+    <BLANKLINE>
+
+    >>> text_indentation('R?andom')
+    R?
+    <BLANKLINE>
+    andom
+
+    >>> text_indentation('Random text?More random text? And more')
+    Random text?
+    <BLANKLINE>
+    More random text?
+    <BLANKLINE>
+     And more
+
+line separator ':'
+
+    >>> text_indentation('Random text:More random text')
+    Random text:
+    <BLANKLINE>
+    More random text
+
+    >>> text_indentation(':More random text')
+    :
+    <BLANKLINE>
+    More random text
+
+    >>> text_indentation('Random text:')
+    Random text:
+    <BLANKLINE>
+
+    >>> text_indentation('Rand:om text')
+    Rand:
+    <BLANKLINE>
+    om text
+
+    >>> text_indentation('Random text:More random text: And more')
+    Random text:
+    <BLANKLINE>
+    More random text:
+    <BLANKLINE>
+     And more
+
+
+Bad args:
+=========
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation('str1', 2)
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+    >>> text_indentation('str1', 'str2', 'str3')
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 3 were given
+
+Wrong data types (Not Strings):
+===============================
+
+Type None arg
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+
+Tuple
+
+    >>> x = tuple(("apple", "lemon", "cherry"))
+    >>> text_indentation(x)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+list
+
+    >>> x = list(("element1", "element2", "element3"))
+    >>> text_indentation(x)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Bool
+
+    >>> x = bool(5)
+    >>> text_indentation(x)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Dict
+
+    >>> x = dict(name="Sebastian", age=33)
+    >>> text_indentation(x)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Overflow
+
+    >>> x = float('inf')
+    >>> text_indentation(x)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+NegativeInt
+
+    >>> x = int(-20)
+    >>> text_indentation(x)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+float
+
+    >>> x = float(20.50)
+    >>> text_indentation(x)
+    Traceback (most recent call last):
+    TypeError: text must be a string
