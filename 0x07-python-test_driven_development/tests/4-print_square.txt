@@ -33,6 +33,7 @@ Normal mode (correct input and output):
     #######
     #######
     #######
+    #######
 
     >>> print_square(0)
 
@@ -61,7 +62,7 @@ list
 
     >>> x = list(("element1", "element2", "element3"))
     >>> print_square(x)
-	    Traceback (most recent call last):
+    Traceback (most recent call last):
     TypeError: size must be an integer
 
 Bool
