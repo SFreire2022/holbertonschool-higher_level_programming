@@ -1,6 +1,13 @@
+# 0x0A. Python - Inheritance
 
+## Technologies
+* Python interpreter `python3 version 3.9`
+* Python code use the pycodestyle `version 2.8.*`
+* Tested on `Ubuntu 20.04 LTS`
 
-
+## Tasks
+The following files are python modules, external documentation for modules
+| -------- | -------- |
 |`0-lookup.py`|Function that returns the list of available attributes and methods of an object|
 |`1-my_list.py`|Write a class MyList that inherits from list|
 |`2-is_same_class.py`|Function that returns True if the object is exactly an instance of the specified class ; otherwise False|
