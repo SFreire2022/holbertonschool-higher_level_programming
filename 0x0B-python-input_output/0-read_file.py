@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module containing just one function to print the content of the given file"""
+"""Module containing just one function to print the
+content of the given file"""
 
 
 def read_file(filename=""):

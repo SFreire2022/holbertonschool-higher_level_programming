@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module containing just one function to write given string to the given file"""
+"""Module containing just one function to write
+given string to the given file"""
 
 
 def write_file(filename="", text=""):
