@@ -113,3 +113,28 @@ class TestRectangleModule(unittest.TestCase):
         self.assertEqual(str(r12), "[Rectangle] (12) 3/6 - 2/4")
         r13 = Rectangle(6, 3, 1, 3, 13)
         self.assertEqual(str(r13), "[Rectangle] (13) 1/3 - 6/3")
+
+    def test_update(self):
+        """ update method args and kwargs """
+        r14 = Rectangle(2, 10, 8, 0, 18)
+        """ update using first arg (id) """
+        r14.update(1)
+        self.assertEqual(r14.width, 2)
+        self.assertEqual(r14.height, 10)
+        self.assertEqual(r14.x, 8)
+        self.assertEqual(r14.y, 0)
+        self.assertEqual(r14.id, 1)
+        """ update all using kwargs in different order """
+        r14.update(y=7, x=9, id=18, height=5, width=9)
+        self.assertEqual(r14.width, 9)
+        self.assertEqual(r14.height, 5)
+        self.assertEqual(r14.x, 9)
+        self.assertEqual(r14.y, 7)
+        self.assertEqual(r14.id, 18)
+        """ update all using kwargs and extra atributes """
+        r14.update(y=5, x=4, id=19, height=6, width=8, extra1=10, extra2=100)
+        self.assertEqual(r14.width, 8)
+        self.assertEqual(r14.height, 6)
+        self.assertEqual(r14.x, 4)
+        self.assertEqual(r14.y, 5)
+        self.assertEqual(r14.id, 19)

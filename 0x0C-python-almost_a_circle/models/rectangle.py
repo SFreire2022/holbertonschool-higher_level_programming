@@ -90,3 +90,18 @@ class Rectangle(Base):
         outputstr = '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(
             self.id, self.x, self.y, self.width, self.height)
         return outputstr
+
+    def update(self, *args, **kwargs):
+        """ Method to update attributes using args and kwargs """
+        correct_args = ['id', 'width', 'height', 'x', 'y']
+        if len(args) > 0:
+            if len(args) > len(correct_args):
+                args_len = len(correct_args)
+            else:
+                args_len = len(args)
+            for i in range(args_len):
+                setattr(self, correct_args[i], args[i])
+        elif kwargs is not None:
+            for key in kwargs:
+                if hasattr(self, key) is True:
+                    setattr(self, key, kwargs[key])
