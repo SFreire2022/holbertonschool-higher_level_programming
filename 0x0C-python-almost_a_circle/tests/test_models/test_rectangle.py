@@ -107,7 +107,7 @@ class TestRectangleModule(unittest.TestCase):
             r11 = Rectangle(-10, 0, -2, 10)
             r11.display()
 
-    def check_str_representation(self):
+    def test_str_repr(self):
         """ Valid string representation for the instance """
         r12 = Rectangle(2, 4, 3, 6, 12)
         with patch('sys.stdout', new=StringIO()) as f_stdo:
