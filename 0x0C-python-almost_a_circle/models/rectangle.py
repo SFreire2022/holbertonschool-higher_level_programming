@@ -78,6 +78,15 @@ class Rectangle(Base):
         return (self.width * self.height)
 
     def display(self):
-        """ Prints to stdout the Rectangle instance with the character # """
+        """ Prints to stdout the Rectangle instance with the character #
+        Now taking care of xy position """
+        print("\n" * self.y, end="")
         for y in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
+
+    def __str__(self):
+        """ Method to return [Rectangle] (<id>) <x>/<y> - <width>/<height> """
+        outputstr = '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(
+            self.id, self.x, self.y, self.width, self.height)
+        return outputstr
