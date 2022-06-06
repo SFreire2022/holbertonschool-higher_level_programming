@@ -102,10 +102,10 @@ class TestRectangleModule(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f_stdo:
              r10.display()
              self.assertEqual(f_stdo.getvalue(), "\n\n   ##\n   ##\n   ##\n")
-    """ Display Rectangle instance with invalid args """
-    with self.assertRaises(ValueError):
-	    r11 = Rectangle(-10, 0, -2, 10)
-	    r11.display()
+        """ Display Rectangle instance with invalid args """
+        with self.assertRaises(ValueError):
+            r11 = Rectangle(-10, 0, -2, 10)
+            r11.display()
 
     def check_str_representation(self):
         """ Valid string representation for the instance """
