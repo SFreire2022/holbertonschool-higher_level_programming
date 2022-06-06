@@ -5,6 +5,9 @@ import unittest
 import pycodestyle
 from models.base import Base
 from models.rectangle import Rectangle
+from unittest.mock import patch
+from io import StringIO
+
 
 
 class TestRectangleModule(unittest.TestCase):
@@ -91,3 +94,26 @@ class TestRectangleModule(unittest.TestCase):
         self.assertEqual(r9.area(), 50)
         r9.height = 3
         self.assertEqual(r9.area(), 15)
+
+    def test_display_valid_args(self):
+        """ Display Rectangle instance with valid args
+        Taking care of xy position"""
+        r10 = Rectangle(2, 3, 3, 2)
+        with patch('sys.stdout', new=StringIO()) as testout:
+             r10.display()
+             self.assertEqual(testout.getvalue(), "\n\n   ##\n   ##\n   ##\n")
+
+    def test_display_invalid_args(self):
+        """ Display Rectangle instance with invalid args """
+        with self.assertRaises(ValueError):
+            r11 = Rectangle(-10, 0, -2, 10)
+            r11.display()
+
+    def check_str_representation(self):
+        """ Valid string representation for the instance """
+        r12 = Rectangle(2, 4, 3, 6, 12)
+        with patch('sys.stdout', new=StringIO()) as str_rep:
+            self.assertEqual(str_rep.getvalue(), "[Rectangle] (12) 3/6 - 2/4")
+        r13 = Rectangle(6, 3, 1, 3, 13)
+        with patch('sys.stdout', new=StringIO()) as str_rep:
+            self.assertEqual(string12.getvalue(), "[Rectangle] (13) 1/3 - 6/3")
