@@ -95,19 +95,17 @@ class TestRectangleModule(unittest.TestCase):
         r9.height = 3
         self.assertEqual(r9.area(), 15)
 
-    def test_display_valid_args(self):
+    def test_display(self):
         """ Display Rectangle instance with valid args
         Taking care of xy position"""
         r10 = Rectangle(2, 3, 3, 2)
         with patch('sys.stdout', new=StringIO()) as f_stdo:
              r10.display()
              self.assertEqual(f_stdo.getvalue(), "\n\n   ##\n   ##\n   ##\n")
-
-    def test_display_invalid_args(self):
-        """ Display Rectangle instance with invalid args """
-        with self.assertRaises(ValueError):
-            r11 = Rectangle(-10, 0, -2, 10)
-            r11.display()
+    """ Display Rectangle instance with invalid args """
+    with self.assertRaises(ValueError):
+	    r11 = Rectangle(-10, 0, -2, 10)
+	    r11.display()
 
     def check_str_representation(self):
         """ Valid string representation for the instance """
