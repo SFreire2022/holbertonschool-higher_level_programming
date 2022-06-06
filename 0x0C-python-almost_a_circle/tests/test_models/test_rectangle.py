@@ -110,10 +110,6 @@ class TestRectangleModule(unittest.TestCase):
     def test_str_repr(self):
         """ Valid string representation for the instance """
         r12 = Rectangle(2, 4, 3, 6, 12)
-        print(r12)
-        with patch('sys.stdout', new=StringIO()) as f_stdo:
-            self.assertEqual(f_stdo.getvalue(), "[Rectangle] (12) 3/6 - 2/4")
+        self.assertEqual(str(self.r12), "[Rectangle] (12) 3/6 - 2/4")
         r13 = Rectangle(6, 3, 1, 3, 13)
-        print(r13)
-        with patch('sys.stdout', new=StringIO()) as f_stdo:
-            self.assertEqual(f_stdo.getvalue(), "[Rectangle] (13) 1/3 - 6/3")
+        self.assertEqual(str(self.r13), "[Rectangle] (13) 1/3 - 6/3")
