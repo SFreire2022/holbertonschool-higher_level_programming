@@ -96,7 +96,7 @@ class TestRectangleModule(unittest.TestCase):
         self.assertEqual(r9.area(), 15)
 
     def test_display(self):
-        """ Display Rectangle instance with valid args
+        """ Display Rectangle instance with valid args to stdout
         Taking care of xy position"""
         r10 = Rectangle(2, 3, 3, 2)
         with patch('sys.stdout', new=StringIO()) as f_stdo:
@@ -110,6 +110,6 @@ class TestRectangleModule(unittest.TestCase):
     def test_str_repr(self):
         """ Valid string representation for the instance """
         r12 = Rectangle(2, 4, 3, 6, 12)
-        self.assertEqual(str(self.r12), "[Rectangle] (12) 3/6 - 2/4")
+        self.assertEqual(str(r12), "[Rectangle] (12) 3/6 - 2/4")
         r13 = Rectangle(6, 3, 1, 3, 13)
-        self.assertEqual(str(self.r13), "[Rectangle] (13) 1/3 - 6/3")
+        self.assertEqual(str(r13), "[Rectangle] (13) 1/3 - 6/3")
