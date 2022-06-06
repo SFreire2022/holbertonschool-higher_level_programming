@@ -99,9 +99,9 @@ class TestRectangleModule(unittest.TestCase):
         """ Display Rectangle instance with valid args
         Taking care of xy position"""
         r10 = Rectangle(2, 3, 3, 2)
-        with patch('sys.stdout', new=StringIO()) as testout:
+        with patch('sys.stdout', new=StringIO()) as f_stdo:
              r10.display()
-             self.assertEqual(testout.getvalue(), "\n\n   ##\n   ##\n   ##\n")
+             self.assertEqual(f_stdo.getvalue(), "\n\n   ##\n   ##\n   ##\n")
 
     def test_display_invalid_args(self):
         """ Display Rectangle instance with invalid args """
@@ -112,8 +112,8 @@ class TestRectangleModule(unittest.TestCase):
     def check_str_representation(self):
         """ Valid string representation for the instance """
         r12 = Rectangle(2, 4, 3, 6, 12)
-        with patch('sys.stdout', new=StringIO()) as str_rep:
-            self.assertEqual(str_rep.getvalue(), "[Rectangle] (12) 3/6 - 2/4")
+        with patch('sys.stdout', new=StringIO()) as f_stdo:
+            self.assertEqual(f_stdo.getvalue(), "[Rectangle] (12) 3/6 - 2/4")
         r13 = Rectangle(6, 3, 1, 3, 13)
-        with patch('sys.stdout', new=StringIO()) as str_rep:
-            self.assertEqual(string12.getvalue(), "[Rectangle] (13) 1/3 - 6/3")
+        with patch('sys.stdout', new=StringIO()) as f_stdo:
+            self.assertEqual(f_stdo.getvalue(), "[Rectangle] (13) 1/3 - 6/3")
