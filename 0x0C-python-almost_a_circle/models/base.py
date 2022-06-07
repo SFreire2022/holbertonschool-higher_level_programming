@@ -83,7 +83,7 @@ class Base:
                 elif cls.__name__ == 'Square':
                     attrs = ['id', 'size', 'x', 'y']
 
-                filecsv = csv.DictWriter(file, fieldnames=attrs)
+                filecsv = csv.DictWriter(myfile, fieldnames=attrs)
                 for obj in list_objs:
                     filecsv.writerow(obj.to_dictionary())
 
