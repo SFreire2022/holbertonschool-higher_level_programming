@@ -137,3 +137,10 @@ class TestSquareModule(unittest.TestCase):
         self.assertEqual(s14.x, 4)
         self.assertEqual(s14.y, 5)
         self.assertEqual(s14.id, 19)
+
+    def test_to_dictionary(self):
+        """ to_dictionary public method test """
+        s15 = Square(4, 2, 8, 5)
+        d = {'y': 8, 'x': 2, 'id': 5, 'size': 4}
+        self.assertDictEqual(s15.to_dictionary(), d)
+        self.assertEqual(type(s15.to_dictionary()), dict)

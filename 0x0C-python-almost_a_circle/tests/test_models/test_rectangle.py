@@ -138,3 +138,10 @@ class TestRectangleModule(unittest.TestCase):
         self.assertEqual(r14.x, 4)
         self.assertEqual(r14.y, 5)
         self.assertEqual(r14.id, 19)
+
+    def test_to_dictionary(self):
+        """ to_dictionary public method test """
+        r15 = Rectangle(15, 4, 2, 8, 5)
+        d = {'y': 8, 'x': 2, 'id': 5, 'height': 4, 'width': 15}
+        self.assertDictEqual(r15.to_dictionary(), d)
+        self.assertEqual(type(r15.to_dictionary()), dict)
