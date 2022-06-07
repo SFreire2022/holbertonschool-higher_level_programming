@@ -61,7 +61,7 @@ class Base:
         """ Load file to instances """
         try:
             with open(cls.__name__ + '.json', 'r') as myfile:
-                jsonstr = file.read()
+                jsonstr = myfile.read()
                 list_dict = Base.from_json_string(jsonstr)
                 list_objs = []
                 for obj_dict in list_dict:
