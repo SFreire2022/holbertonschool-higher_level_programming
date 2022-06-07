@@ -99,7 +99,7 @@ class Base:
                     attrs = ['id', 'size', 'x', 'y']
 
                 csvdict = csv.DictReader(myfile, fieldnames=attrs)
-                list_dict = []
+                listdict = []
                 for row in csvdict:
                     newdict = {}
                     for key, val in row.items():
