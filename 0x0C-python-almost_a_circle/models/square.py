@@ -23,10 +23,6 @@ class Square(Rectangle):
     def size(self, new_size):
         """ Method to set the private attributes width and height to
         the same value size. """
-        if not isinstance(new_size, int):
-            raise TypeError("size must be an integer")
-        if new_size <= 0:
-            raise ValueError("size must be > 0")
         self.width = new_size
         self.height = new_size
 

@@ -65,21 +65,21 @@ class TestSquareModule(unittest.TestCase):
         self.assertEqual(s5.id, 15)
 
     def test_args_type_error(self):
-        """ Not integer argumments """
+        """ Not integer argumments check from inherited setter method """
         s6 = Square(10, 20)
-        with self.assertRaisesRegex(TypeError, "size must be an integer"):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s6.size = "string10"
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s6.x = "string1"
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s6.y = "string2"
 
-    def test_width_height_gt_0(self):
-        """ Width and height greater than 0 """
+    def test_size_gt_0(self):
+        """ Size greater than 0 an check from inherited setter method """
         s7 = Square(10, 20)
-        with self.assertRaisesRegex(ValueError, "size must be > 0"):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             s7.size = -1
-        with self.assertRaisesRegex(ValueError, "size must be > 0"):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             s7.size = 0
 
     def test_x_y_ge_0(self):
