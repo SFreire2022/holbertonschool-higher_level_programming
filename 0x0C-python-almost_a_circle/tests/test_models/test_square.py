@@ -106,7 +106,8 @@ class TestSquareModule(unittest.TestCase):
              self.assertEqual(f_stdo.getvalue(), "\n\n   ##\n   ##\n")
         """ Display Square instance with valid args to stdout
         x and y = 0"""
-        s10.x, s10.y = 0
+        s10.x = 0
+        s10.y = 0
         with patch('sys.stdout', new=StringIO()) as f_stdo:
              s10.display()
              self.assertEqual(f_stdo.getvalue(), "##\n##\n")
