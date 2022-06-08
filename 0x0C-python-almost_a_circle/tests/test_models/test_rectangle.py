@@ -102,6 +102,12 @@ class TestRectangleModule(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f_stdo:
              r10.display()
              self.assertEqual(f_stdo.getvalue(), "\n\n   ##\n   ##\n   ##\n")
+        """ Display Rectangle instance with valid args to stdout
+        x and y = 0"""
+        r10.x, r10.y = 0
+        with patch('sys.stdout', new=StringIO()) as f_stdo:
+             r10.display()
+             self.assertEqual(f_stdo.getvalue(), "##\n##\n##\n")
         """ Display Rectangle instance with invalid args """
         with self.assertRaises(ValueError):
             r11 = Rectangle(-10, 0, -2, 10)
