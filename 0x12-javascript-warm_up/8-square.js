@@ -5,6 +5,6 @@ if (Number.isNaN(side)) {
   console.log('Missing size');
 } else {
   for (; side > 0; side--) {
-    console.log('x'.repeat(i));
+    console.log('X'.repeat(i));
   }
 }
