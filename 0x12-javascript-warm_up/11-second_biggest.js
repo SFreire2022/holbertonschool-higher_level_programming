@@ -1,7 +1,9 @@
 #!/usr/bin/node
 // Javascript program to find second largest
 // element in an array
-const arr = process.argv.slice(2);
+const arr = process.argv.slice(2).map((x) => {
+  return parseInt(x);
+});
 if (Number.isNaN(arr) || arr === 0) {
   console.log('0');
 } else {
