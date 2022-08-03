@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const OldSquare = require('./5-square');
 
-module.exports = class Square extends OldSquare {
+class Square extends OldSquare {
   charPrint (c) {
     if (typeof (c) === 'undefined') {
       c = 'X';
@@ -12,4 +12,5 @@ module.exports = class Square extends OldSquare {
       console.log(c.repeat(this.width));
     }
   }
-};
+}
+module.exports = Square;
