@@ -4,5 +4,5 @@ const myObject = {
   value: 12
 };
 console.log(myObject);
-myObject.value = 89;// line to replace the value of an object atribute
+myObject.value = 89;
 console.log(myObject);
