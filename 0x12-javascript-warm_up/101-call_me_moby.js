@@ -1,6 +1,7 @@
 #!/usr/bin/node
-exports.callMeMoby = function (x, myCallback) {
+exports.callMeMoby = function (x, theFunction) {
   for (; x > 0; x--) {
-    myCallback();
+    // callBackFunction
+    theFunction();
   }
 };
