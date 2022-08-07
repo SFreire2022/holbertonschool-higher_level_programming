@@ -23,6 +23,7 @@ if __name__ == '__main__':
     res_query_rows = cursor.fetchall()
 
     for row in res_query_rows:
-        print(row)
+        if row[1] == state_arg:
+            print(row)
     cursor.close()
     db.close()
