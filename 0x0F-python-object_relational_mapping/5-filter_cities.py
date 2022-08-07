@@ -24,7 +24,6 @@ if __name__ == '__main__':
     cursor.execute(sql_query, (state_arg,))
     res_query_rows = cursor.fetchall()
 
-    for row in res_query_rows:
-        print(row)
+    print(", ".join(row[0] for row in res_query_rows))
     cursor.close()
     db.close()
