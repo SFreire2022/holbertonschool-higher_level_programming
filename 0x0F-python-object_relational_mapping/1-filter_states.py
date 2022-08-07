@@ -16,8 +16,8 @@ if __name__ == '__main__':
         db=argv[3],
         charset="utf8")
     cursor = db.cursor()
-    sql_query = "SELECT * FROM states WHERE name LIKE 'N%'\
-                ORDER BY states.id ASC"
+    sql_query = "SELECT * FROM states WHERE CONVERT(`name` USING Latin1) \
+                COLLATE Latin1_General_CS LIKE 'N%'"
     cursor.execute(sql_query)
     res_query_rows = cursor.fetchall()
 
