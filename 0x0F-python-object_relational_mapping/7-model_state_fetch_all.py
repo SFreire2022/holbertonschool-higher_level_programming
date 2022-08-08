@@ -14,4 +14,3 @@ if __name__ == "__main__":
     states = Session().query(State).order_by(State.id).all()
     for state in states:
         print("{:d}: {}".format(state.id, state.name))
-    Session().close()
