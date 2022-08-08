@@ -11,6 +11,8 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
-    states = Session().query(State).order_by(State.id).all()
+	session = Session()
+    states = session.query(State).order_by(State.id).all()
     for state in states:
         print("{:d}: {}".format(state.id, state.name))
+    session.close()
