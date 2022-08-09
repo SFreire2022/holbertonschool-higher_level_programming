@@ -1,7 +1,9 @@
+#!/usr/bin/python3
 """
 Python script that Change the name of the State where id = 2 to New Mexico
 the database hbtn_0e_6_usa, using sqlalchemy.
 """
+
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
