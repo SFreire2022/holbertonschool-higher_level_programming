@@ -2,12 +2,15 @@
 const axios = require('axios').default;
 const url = `https://swapi-api.hbtn.io/api/films/${process.argv[2]}`;
 
-axios.get(url).then((resp) => {
-  for (const character in resp.data.characters) {
-    axios.get(resp.data.characters[character]).then((resp2) => {
-      console.log(resp2.data.name);
-    });
+async function getAsync () {
+  try {
+    const resp = await axios.get(url);
+    for (const charID in resp.data.characters) {
+      const respChar = await axios.get(resp.data.characters[charID]);
+      console.log(respChar.data.name);
+    }
+  } catch (error) {
+    console.log(error);
   }
-}).catch((error) => {
-  console.log(error);
-});
+}
+getAsync();
